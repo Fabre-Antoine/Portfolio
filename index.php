@@ -41,7 +41,7 @@ get_header();
 
     <div class="project-card">
         <div class="project-image-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/example.jpg" alt="Description de l'image" class="project-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/usebike1.webp" alt="Mockup projet Usebike" class="project-image">
         </div>
     <div class="project-content">
         <h4 class="project-title">Usebike</h4>
@@ -52,7 +52,7 @@ get_header();
 
     <div class="project-card">
         <div class="project-image-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/example.jpg" alt="Description de l'image" class="project-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image1_ijf.webp" alt="Mockup Projet IJF" class="project-image">
     </div>
     <div class="project-content">
         <h4 class="project-title">Logo IJF</h4>
@@ -63,7 +63,7 @@ get_header();
     
     <div class="project-card">
     <div class="project-image-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/example.jpg" alt="Description de l'image" class="project-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image1_flick.webp" alt="Mockup Projet Flick" class="project-image">
     </div>
     <div class="project-content">
         <h4 class="project-title">Flick</h4>
@@ -73,7 +73,7 @@ get_header();
     </div>
     <div class="card-contact">
     <div class="card-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project.jpg" alt="Image de projet">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/grille 2.svg" alt="Image de projet">
     </div>
     <div class="card-contact-content">
         <h5 class="card-contact-title">Une idée de Projet ?</h5>

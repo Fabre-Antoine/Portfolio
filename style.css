@@ -14,6 +14,11 @@ body{
     background-color: #101111;
 }
 
+ 
+.logo-container{
+    margin-left: 200px;
+    margin-top: 30px;
+}
 
 /* Menu de navigation */
 .menu-nav {
@@ -49,7 +54,7 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
 }
 
 /* Élément de la liste */
@@ -61,7 +66,7 @@ body{
 .menu-link {
     color: #fff;
     text-decoration: none;
-    
+    font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -77,6 +82,7 @@ body{
     display: flex;
     justify-content: center; /* Centre le contenu */
     align-items: center;
+    margin-top: 30px;
 }
 
 /* SVG centré parfaitement */
@@ -133,6 +139,7 @@ body{
     margin: 20px auto; /* Centre la carte horizontalement */
     padding: 20px; /* Espacement interne */
     margin-top: 80px;
+    gap: 20px;
 }
 
 /* Colonne de l'image */
@@ -170,26 +177,36 @@ body{
 
 /* Bouton */
 .project-button {
-    display: block; /* Occupe toute la largeur disponible */
-    max-width: 383px; /* Le bouton prend toute la largeur */
-    padding: 10px 28px; /* Espacement interne pour le contenu */
-    margin-top: 20px; /* Espacement au-dessus */
+    display: inline-block; /* Largeur ajustable */
+    padding: 10px 28px; /* Espacement interne */
     font-size: 16px; /* Taille du texte */
-    color: #fff; /* Couleur du texte */
-    background-color: #101111; /* Couleur de fond */
-    border: 1px solid #fff; /* Bordure blanche */
-    border-radius: 9px; /* Coins arrondis */
-    text-decoration: none; /* Supprime le soulignement */
-    cursor: pointer; /* Curseur de pointeur */
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase; /* Texte en majuscules */
+    color: transparent; /* Rendre le texte transparent au départ */
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%); /* Dégradé appliqué au texte */
+    -webkit-background-clip: text; /* Clip pour le texte */
+    background-clip: text;
+    border: 2px solid; /* Bordure visible */
+    border-image-source: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%); /* Dégradé pour la bordure */
+    border-image-slice: 1; /* Étendre le dégradé à toute la bordure */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: transparent; /* Fond initial transparent */
     text-align: center; /* Centre le texte horizontalement */
-    line-height: 1.5; /* Assure un bon espacement entre les lignes (à ajuster si nécessaire) */
-    transition: background-color 0.3s ease; /* Animation fluide pour le fond */
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    text-decoration: none; /* Supprime le soulignement */
+    cursor: pointer; /* Curseur en pointeur */
+    transition: all 0.3s ease; /* Animation fluide */
 }
 
+/* Effet au survol */
 .project-button:hover {
-    background-color: #333; /* Change la couleur au survol */
+    color: #000; /* Texte noir */
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%); /* Dégradé pour le fond */
+    -webkit-background-clip: border-box; /* Supprime le clip du texte */
+    background-clip: border-box;
+    border-image-source: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%); /* Change la bordure au survol */
 }
+
+
 
 /* ////////////////////// Card Contact Accueil //////////////////////*/
 
@@ -213,6 +230,7 @@ body{
     padding: 20px; /* Espacement interne */
     text-align: left; /* Aligne le texte à gauche */
     order: 1; /* Affiche le contenu en premier */
+    gap: 20px;
 }
 
 /* Image à droite */
@@ -233,7 +251,7 @@ body{
 .card-contact-title {
     font-size: 1.5rem; /* Taille du titre */
     color: #fff; /* Couleur du titre */
-    margin-bottom: 10px; /* Espacement sous le titre */
+    margin-bottom: 30px; /* Espacement sous le titre */
     margin-top: 10px; /* Espacement au-dessus du titre */
 }
 
@@ -241,7 +259,7 @@ body{
 .card-contact-text {
     font-size: 1rem; /* Taille du texte */
     color: #ccc; /* Couleur du texte */
-    margin-bottom: 20px; /* Espacement sous le texte */
+    margin-bottom: 30px; /* Espacement sous le texte */
 }
 
 /* Bouton */
@@ -380,7 +398,7 @@ footer {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 45px;
 }
 
 /* Élément de la liste */
@@ -593,3 +611,161 @@ textarea.form-control {
 
 /* ////////////////////// Page Projet //////////////////////*/
 
+.card-projets{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Carte au-dessus des SVG */
+}
+
+.card-projets-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card-projets-title {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.ligne-projets {
+    flex-grow: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%);
+    border: none;
+    border-radius: 2px;
+}
+
+/* Conteneur principal des deux colonnes */
+.card-projets-content-wrapper {
+    display: flex; /* Active Flexbox */
+    gap: 20px; /* Espace entre les colonnes */
+    width: 100%; /* Prend toute la largeur */
+    margin-top: 20px;
+}
+
+/* Colonne gauche : Contenu principal */
+.card-projets-content {
+    flex: 1; /* Prend 50% de la largeur */
+    display: flex;
+    flex-direction: column; /* Aligne verticalement */
+    gap: 15px; /* Espace entre les éléments */
+    color: #ddd; /* Couleur du texte */
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+/* Colonne droite : Images */
+.liste-images {
+    flex: 1; /* Prend 50% de la largeur */
+    display: flex;
+    flex-direction: column; /* Aligne les images verticalement */
+    gap: 10px; /* Espace entre les images */
+    align-items: center; /* Centre horizontalement les images */
+}
+
+/* Images */
+.card-projets-content img,
+.liste-images img {
+    width: 100%; /* Images responsives */
+    max-width: 300px; /* Limite la largeur maximale */
+    height: auto; /* Conserve les proportions */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Images dans la section compétences */
+.card-projets-content img {
+    max-width: 80px; /* Limite la largeur maximale */
+    height: auto; /* Conserve les proportions */
+    display: inline-block; /* Aligne les images horizontalement */
+    margin: 10px; /* Ajoute un espace autour des images */
+    border-radius: 8px; /* Coins arrondis si nécessaire */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optionnel : Ajoute une ombre pour un effet esthétique */
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .card-projets-content-wrapper {
+        flex-direction: column; /* Passe en affichage vertical */
+    }
+
+    .card-projets-content, .liste-images {
+        width: 100%; /* Chaque colonne prend toute la largeur */
+    }
+}
+
+
+/* ////////////////////// Page Archive //////////////////////*/
+
+/* Grille de projets */
+.archive-projets-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards par ligne */
+    gap: 20px;
+    width: 100%; /* S'étend sur toute la largeur */
+    margin-top: 20px;
+}
+
+/* Card individuelle */
+.archive-projets-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive-projets-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Image de projet */
+.archive-projets-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Titre de la card */
+.archive-projets-card-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* Bouton */
+.archive-projets-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.archive-projets-button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive : 1 card par ligne sur mobile */
+@media (max-width: 768px) {
+    .archive-projets-grid {
+        grid-template-columns: 1fr; /* 1 card par ligne */
+    }
+}
