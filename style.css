@@ -1,0 +1,595 @@
+/*
+Theme Name: Portfolio
+Theme URI: https://monurlpersonnel.com/mesthemes
+Author: Antoine Fabre
+Author URI: https://monurlpersonnel.com
+Description: Theme Projet Portfolio
+Version: 0.1
+Tags: portfolio, projet, theme
+*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-color: #101111;
+}
+
+
+/* Menu de navigation */
+.menu-nav {
+    position: relative; /* Position pour gérer le pseudo-élément */
+    background-color: #444; /* Fond principal de l'élément */
+    padding: 10px;
+    border-radius: 20px; /* Coins arrondis */
+    max-width: 400px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.menu-nav::before {
+    content: ""; /* Nécessaire pour le pseudo-élément */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit; /* Suivre les coins arrondis */
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%);
+    padding: 2px; /* Épaisseur de la bordure */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Masque pour ne laisser que la bordure */
+    -webkit-mask-composite: xor; /* Masquage pour couper le fond */
+    mask-composite: exclude; /* Équivaut à `xor` sur d'autres navigateurs */
+    z-index: -1; /* Place le pseudo-élément sous le contenu principal */
+}
+
+/* Liste principale du menu */
+.menu-principal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Élément de la liste */
+.menu-item {
+    display: inline;
+}
+
+/* Lien de navigation */
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Section principale */
+.hero-section {
+    position: relative; /* Contexte pour le positionnement absolu */
+    height: 100vh; /* Hauteur pleine page */
+    max-width: 1091px; /* Largeur maximale */
+    max-height: 568px; /* Hauteur maximale */
+    margin: 0 auto; /* Centre la section horizontalement */
+    overflow: hidden; /* Cache les débordements */
+    display: flex;
+    justify-content: center; /* Centre le contenu */
+    align-items: center;
+}
+
+/* SVG centré parfaitement */
+.hero-section svg {
+    position: absolute; /* Place le SVG par rapport au parent */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Recentre le SVG au milieu */
+    width: 100%; /* Largeur à 100% du conteneur */
+    height: auto; /* Garde les proportions */
+    max-width: calc(100% - 40px); /* Respecte un espace autour */
+    max-height: calc(100% - 40px); /* Respecte la hauteur disponible */
+    object-fit: contain; /* Ajuste sans déformer */
+    z-index: 1; /* Place le SVG en arrière-plan */
+    bottom: 0px;
+}
+
+/* Contenu principal (h1 et h2) */
+.hero-content {
+    position: relative; /* Assure le placement par rapport au parent */
+    z-index: 2; /* Place le contenu au-dessus du SVG */
+    text-align: center; /* Centre le texte */
+    color: white; /* Couleur du texte */
+    transform: translateY(-70px); /* Décale l'élément vers le haut de 20px */
+    
+}
+
+
+
+
+/* Titre principal */
+.titre {
+    font-size: 3rem;
+    margin: 0 0 10px; /* Espacement avec le sous-titre */
+}
+
+/* Sous-titre */
+.hero-content h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* //////////////////////Card Accueil //////////////////////*/
+
+/* Conteneur principal */
+.project-card {
+    display: flex; /* Active un layout en colonnes */
+    align-items: stretch; /* Équilibre la hauteur des colonnes */
+    background: #151515; /* Couleur de fond */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    max-width: 1093px; /* Largeur maximale de la carte */
+    margin: 20px auto; /* Centre la carte horizontalement */
+    padding: 20px; /* Espacement interne */
+    margin-top: 80px;
+}
+
+/* Colonne de l'image */
+.project-image-container {
+    flex: 1; /* La colonne de l'image occupe 1 partie */
+}
+
+.project-image {
+    width: 100%; /* L'image remplit sa colonne */
+    height: 100%; /* L'image prend toute la hauteur disponible */
+    object-fit: cover; /* Maintient les proportions de l'image */
+}
+
+/* Colonne du contenu */
+.project-content {
+    flex: 2; /* La colonne de texte occupe 2 parties */
+    display: flex; /* Active un layout pour gérer les positions */
+    flex-direction: column; /* Dispose les enfants verticalement */
+    padding: 16px; /* Espacement interne */
+}
+
+/* Titre */
+.project-title {
+    font-size: 36px;
+    color: #FAFAFA;
+    margin: 0 0 12px; /* Espacement avec la description */
+}
+
+/* Description */
+.project-description {
+    font-size: 1rem;
+    color: #FAFAFA;
+    margin-bottom: auto; /* Pousse le bouton vers le bas */
+}
+
+/* Bouton */
+.project-button {
+    display: block; /* Occupe toute la largeur disponible */
+    max-width: 383px; /* Le bouton prend toute la largeur */
+    padding: 10px 28px; /* Espacement interne pour le contenu */
+    margin-top: 20px; /* Espacement au-dessus */
+    font-size: 16px; /* Taille du texte */
+    color: #fff; /* Couleur du texte */
+    background-color: #101111; /* Couleur de fond */
+    border: 1px solid #fff; /* Bordure blanche */
+    border-radius: 9px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement */
+    cursor: pointer; /* Curseur de pointeur */
+    text-align: center; /* Centre le texte horizontalement */
+    line-height: 1.5; /* Assure un bon espacement entre les lignes (à ajuster si nécessaire) */
+    transition: background-color 0.3s ease; /* Animation fluide pour le fond */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.project-button:hover {
+    background-color: #333; /* Change la couleur au survol */
+}
+
+/* ////////////////////// Card Contact Accueil //////////////////////*/
+
+/* Conteneur principal */
+.card-contact {
+    display: flex; /* Active un layout en colonnes */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: space-between; /* Équilibre les colonnes */
+    background-color: #151515; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache tout débordement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    max-width: 1093px; /* Largeur maximale */
+    margin: 20px auto; /* Centre horizontalement */
+    margin-top: 80px;
+}
+
+/* Contenu à gauche */
+.card-contact-content {
+    flex: 2; /* La colonne de contenu occupe 2/3 de l'espace */
+    padding: 20px; /* Espacement interne */
+    text-align: left; /* Aligne le texte à gauche */
+    order: 1; /* Affiche le contenu en premier */
+}
+
+/* Image à droite */
+.card-image {
+    flex: 1; /* La colonne de l'image occupe 1/3 de l'espace */
+    max-width: 50%; /* Limite la largeur de l'image */
+    height: auto; /* Garde les proportions */
+    order: 2; /* Affiche l'image en second */
+}
+
+.card-image img {
+    width: 100%; /* L'image remplit sa colonne */
+    height: auto; /* Conserve les proportions */
+    object-fit: cover; /* Remplit l'espace tout en maintenant les proportions */
+}
+
+/* Titre */
+.card-contact-title {
+    font-size: 1.5rem; /* Taille du titre */
+    color: #fff; /* Couleur du titre */
+    margin-bottom: 10px; /* Espacement sous le titre */
+    margin-top: 10px; /* Espacement au-dessus du titre */
+}
+
+/* Texte */
+.card-contact-text {
+    font-size: 1rem; /* Taille du texte */
+    color: #ccc; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement sous le texte */
+}
+
+/* Bouton */
+.contact-button {
+    display: inline-block; /* Rend le bouton comme un bloc */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 15px; /* Taille du texte */
+    color: #101111; /* Couleur du texte */
+    font-weight: bold; /* Accentue le texte */
+    background: var(--linear, linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%));    border: none; /* Supprime les bordures */
+    border-radius: 70px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement */
+    cursor: pointer; /* Change le curseur au survol */
+    
+}
+
+.contact-button:hover {
+    background-color: #005bb5; /* Change la couleur au survol */
+}
+
+
+/* ////////////////////// Bandeau deroulant //////////////////////*/
+/* Conteneur principal */
+.skills-marquee {
+    width: 100%; /* Le bandeau occupe toute la largeur */
+    overflow: hidden; /* Cache le contenu qui dépasse */
+    background-color: #151515; /* Couleur de fond */
+    padding: 10px 0; /* Espacement vertical */
+    position: relative;
+    border-top: #363636 1px solid ; /* Bordure en haut */
+    border-bottom: #363636 1px solid ; /* Bordure en bas */
+}
+
+/* Conteneur des éléments défilants */
+.skills-marquee-content {
+    display: flex; /* Aligne les éléments horizontalement */
+    gap: 100px; /* Espacement entre les éléments */
+    animation: scroll 20s linear infinite; /* Animation fluide continue */
+    white-space: nowrap; /* Empêche les retours à la ligne */
+}
+
+/* Animation de défilement */
+@keyframes scroll {
+    from {
+        transform: translateX(0); /* Commence au début */
+    }
+    to {
+        transform: translateX(-50%); /* Définit la fin à mi-chemin, pour une boucle */
+    }
+}
+
+/* Style des éléments <p> */
+.skill-item {
+    font-size: 1.2rem; /* Taille du texte */
+    color: #fff; /* Couleur du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    display: inline-block; /* Maintient l'alignement horizontal */
+    font-weight: bold; /* Accentue le texte */
+    text-transform: uppercase; /* Majuscules pour un style professionnel */
+}
+   
+
+/* ////////////////////// Titres section projet //////////////////////*/
+/* Conteneur principal */
+.projects-section {
+    padding: 20px; /* Espacement interne */
+    margin-left: 20px; /* Marge à gauche */
+    margin-right: 20px; /* Marge à droite */
+    margin-top: 30px;
+}
+
+/* Conteneur du header */
+.projects-header {
+    display: flex; /* Active le layout Flexbox */
+    align-items: center; /* Aligne verticalement les éléments */
+    gap: 15px; /* Espacement horizontal entre le titre et la ligne */
+}
+
+/* Titre de la section */
+.projects-title {
+    font-size: 2rem; /* Taille du texte */
+    color: #FFFFFF; /* Couleur du texte */
+    font-weight: bold; /* Accentue le texte */
+    margin: 0; /* Supprime les marges par défaut */
+    text-transform: uppercase; /* Met le texte en majuscules */
+}
+
+/* Ligne de séparation avec un dégradé */
+.projects-divider {
+    flex-grow: 1; /* La ligne occupe tout l'espace restant */
+    height: 3px; /* Épaisseur personnalisée */
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%); /* Dégradé de gauche à droite */
+    border: none; /* Supprime les styles par défaut de <hr> */
+    border-radius: 2px; /* Coins légèrement arrondis pour la ligne */
+}
+
+/* ////////////////////// Footer //////////////////////*/
+
+footer {
+    background-color: #151515; /* Couleur de fond */
+    padding: 40px;
+    margin-top: 50px;
+}
+.footer-nav {
+    position: relative; /* Position pour gérer le pseudo-élément */
+    background-color: #444; /* Fond principal de l'élément */
+    padding: 10px;
+    border-radius: 20px; /* Coins arrondis */
+    max-width: 400px;
+    margin: 0 auto;
+    z-index: 1;
+    
+}
+
+.footer-nav::before {
+    content: ""; /* Nécessaire pour le pseudo-élément */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit; /* Suivre les coins arrondis */
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%);
+    padding: 2px; /* Épaisseur de la bordure */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Masque pour ne laisser que la bordure */
+    -webkit-mask-composite: xor; /* Masquage pour couper le fond */
+    mask-composite: exclude; /* Équivaut à `xor` sur d'autres navigateurs */
+    z-index: -1; /* Place le pseudo-élément sous le contenu principal */
+    
+}
+
+/* Liste principale du menu */
+.footer-principal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Élément de la liste */
+.footer-item {
+    display: inline;
+}
+
+/* Lien de navigation */
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* ////////////////////// A propos //////////////////////*/
+
+
+/* Conteneur général pour les SVG et la carte */
+.svg-container {
+    position: relative; /* Contexte pour positionner les SVG */
+    max-width: 1200px;
+    margin: 80px auto 0; /* Centre le conteneur */
+    z-index: 0; /* Garde les SVG en arrière-plan */
+}
+
+/* SVG décoratif : coin supérieur gauche */
+.svg-top-left {
+    position: absolute;
+    top: -60px; /* Décalage pour sortir de la carte */
+    left: -60px;
+    max-width: 530px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1; /* Place le SVG derrière tout */
+}
+
+/* SVG décoratif : coin inférieur droit */
+.svg-bottom-right {
+    position: absolute;
+    bottom: -60px; /* Décalage pour sortir de la carte */
+    right: -60px;
+    max-width: 530px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1; /* Place le SVG derrière tout */
+}
+
+/* Carte principale */
+.card-apropos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Carte au-dessus des SVG */
+}
+
+/* En-tête contenant le titre et la ligne */
+.card-apropos-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Titre */
+.card-apropos-title {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Ligne */
+.ligne-apropos {
+    flex-grow: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%);
+    border: none;
+    border-radius: 2px;
+}
+
+/* Contenu principal */
+.card-apropos-content-wrapper {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.card-apropos-content {
+    flex: 1;
+    color: #ddd;
+}
+
+.card-apropos-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.card-apropos-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ////////////////////// Contact //////////////////////*/
+
+.card-page-contact{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Carte au-dessus des SVG */
+}
+ 
+/* Conteneur principal */
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Groupe des champs */
+.form-group {
+    display: flex; /* Active Flexbox pour aligner label et champ horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin-bottom: 15px;
+}
+
+.form-group:last-child {
+    display: block; /* Le dernier champ (textarea) revient à un alignement vertical */
+}
+
+/* Labels */
+.form-group label {
+    flex: 0 0 150px; /* Taille fixe pour les labels */
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 28px;
+    margin-right: 30px; /* Espacement entre le label et le champ */
+    text-align: left;
+}
+
+/* Champs de formulaire */
+.form-control {
+    flex: 1; /* Les champs prennent l'espace restant */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 690px; /* Largeur maximale pour les champs */
+}
+
+textarea.form-control {
+    width: 100%; /* Prend toute la largeur */
+    resize: vertical; /* Permet à l'utilisateur de redimensionner */
+}
+
+/* Bouton Envoyer */
+.contact-submit {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-submit:hover {
+    background-color: #005bb5;
+}
+
+
+/* ////////////////////// Page Projet //////////////////////*/
+
