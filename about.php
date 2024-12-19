@@ -39,7 +39,7 @@ Sur ce portfolio, vous découvrirez une sélection de mes projets qui reflètent
             </div>
             <div class="card-apropos-image">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/example.jpg" 
-                     alt="Description de l'image" 
+                     alt="image_apropos" 
                      class="project-image">
             </div>
         </div>
