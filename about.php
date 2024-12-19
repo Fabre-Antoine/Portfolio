@@ -27,11 +27,14 @@ get_header(); ?>
         <div class="card-apropos-content-wrapper">
             <div class="card-apropos-content">
                 <p class="card-apropos-text">
-                Lorem ipsum dolor sit amet consectetur. Massa interdum ut rhoncus nisl commodo cras. Tempus eget vitae ut tellus ullamcorper eget. Dictum tortor non platea sagittis nisi quis semper volutpat elit. Tempor lacus et vitae risus. Volutpat quis ut mauris velit.
-                Libero dapibus adipiscing dolor odio luctus quis ut donec in. Senectus eget maecenas ac aliquam eu praesent turpis vel. Felis purus ullamcorper nunc aenean pulvinar sed. Faucibus ultricies non netus nulla. Massa proin id ullamcorper viverra odio elementum. Justo consequat ac ullamcorper tempor lobortis.
+                Bonjour et bienvenue sur mon portfolio ! Je m'appelle Antoine Fabre, étudiant en deuxième année de BUT Métiers du Multimédia et de l'Internet (MMI) à Montbéliard. Ce parcours me permet de développer des compétences variées dans les domaines du multimédia, du web et de la communication. Mon domaine de prédilection est le web design, une discipline où je peux exprimer ma créativité tout en m'appuyant sur des bases techniques solides. Concevoir des interfaces modernes, intuitives et adaptées aux besoins des utilisateurs est un défi que j'aborde avec passion et rigueur.
+
+Mon goût pour la création ne s'arrête pas là. En dehors de mes études, je cultive deux passions qui me définissent pleinement : le sport mécanique et le dessin. Le sport mécanique m'inspire par ses valeurs de précision, de dépassement de soi et d’innovation technique, des qualités que j'essaie d'appliquer à mes projets professionnels. Le dessin, quant à lui, est une véritable échappatoire créative. C'est à travers cette pratique que je développe mon sens artistique, en explorant les formes, les couleurs et les émotions.
                 </p>
                 <p class="card-apropos-text">
-                Imperdiet gravida urna turpis mauris. Nec tempor risus urna dolor faucibus morbi pharetra. Cras sed cursus lorem aliquet fringilla. Netus nunc et proin egestas lacus. Auctor massa sapien at diam sed facilisis. Nec tincidunt tincidunt aliquet nunc. A viverra fusce integer erat egestas nunc nunc lacus non. Non nascetur cras viverra mauris massa accumsan tellus id erat. Nunc nunc tellus purus in blandit elit cras tristique felis. Non ultrices non ac ut dictum vitae magna vel. Volutpat dictum quisque sagittis faucibus egestas semper in. Ipsum eu urna lacus tellus in.
+                Ce mélange d’intérêt pour la technologie, le design et l’expression artistique me motive à toujours aller plus loin. J'aime relever de nouveaux défis, apprendre de nouvelles compétences et collaborer avec des personnes partageant la même passion pour le design et l'innovation.
+
+Sur ce portfolio, vous découvrirez une sélection de mes projets qui reflètent mon parcours et ma vision. Que vous soyez à la recherche d’un collaborateur pour un projet ou simplement curieux de mon travail, n’hésitez pas à me contacter. Ce sera un plaisir d’échanger avec vous et, pourquoi pas, de contribuer ensemble à vos idées !
                 </p>
             </div>
             <div class="card-apropos-image">
