@@ -52,7 +52,7 @@ get_header(); ?>
 
         <!-- Bouton Envoyer -->
         <div class="form-group">
-            <button type="submit" name="submit" class="contact-submit">Envoyer</button>
+            <button type="submit" name="submit" class="project-button">Envoyer</button>
         </div>
     </form>
 

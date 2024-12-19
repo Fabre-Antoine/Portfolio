@@ -17,9 +17,9 @@
                 <div class="nav-container">
                     <ul class="menu-principal">
                         <li class="menu-item"><a class="menu-link" href="<?php echo home_url(); ?>">Accueil</a></li>
-                        <li class="menu-item"><a class="menu-link" href="<?php echo home_url('/'); ?>">A propos</a></li>
-                        <li class="menu-item"><a class="menu-link" href="<?php echo home_url('/?page_id=4'); ?>">Projets</a></li>
-                        <li class="menu-item"><a class="menu-link" href="<?php echo home_url('/?page_id=5'); ?>">Contact</a></li>
+                        <li class="menu-item"><a class="menu-link" href="<?php echo home_url('/a-propos'); ?>">A propos</a></li>
+                        <li class="menu-item"><a class="menu-link" href="<?php echo home_url('/mes_projets'); ?>">Projets</a></li>
+                        <li class="menu-item"><a class="menu-link" href="<?php echo home_url('/contact'); ?>">Contact</a></li>
                     </ul>
                 </div>
             </nav>

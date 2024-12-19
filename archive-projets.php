@@ -25,31 +25,27 @@ get_header(); // Charge le header du thème
         <div class="archive-projets-grid">
         <!-- Card 1 -->
         <div class="archive-projets-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/projet1.jpg" alt="Projet 1" class="archive-projets-image">
-            <h2 class="archive-projets-card-title">Titre du Projet 1</h2>
-            <a href="https://example.com/projet1" class="archive-projets-button">Voir le projet</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/UseBike4.webp" alt="Projet 1" class="archive-projets-image">
+            <h2 class="archive-projets-card-title">Usebike</h2>
+            <a class="project-button" href="<?php echo home_url('/projet-1'); ?>">Voir le projet</a>
         </div>
 
         <!-- Card 2 -->
         <div class="archive-projets-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/projet2.jpg" alt="Projet 2" class="archive-projets-image">
-            <h2 class="archive-projets-card-title">Titre du Projet 2</h2>
-            <a href="https://example.com/projet2" class="archive-projets-button">Voir le projet</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/IJF-2.webp" alt="Projet 2" class="archive-projets-image">
+            <h2 class="archive-projets-card-title">Logo IJF</h2>
+            <a href="https://example.com/projet2" class="project-button">Voir le projet</a>
         </div>
 
         <!-- Card 3 -->
         <div class="archive-projets-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/projet3.jpg" alt="Projet 3" class="archive-projets-image">
-            <h2 class="archive-projets-card-title">Titre du Projet 3</h2>
-            <a href="https://example.com/projet3" class="archive-projets-button">Voir le projet</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flick2.webp" alt="Projet 3" class="archive-projets-image">
+            <h2 class="archive-projets-card-title">Flick</h2>
+            <a href="https://example.com/projet3" class="project-button">Voir le projet</a>
         </div>
 
         <!-- Card 4 -->
-        <div class="archive-projets-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/projet4.jpg" alt="Projet 4" class="archive-projets-image">
-            <h2 class="archive-projets-card-title">Titre du Projet 4</h2>
-            <a href="https://example.com/projet4" class="archive-projets-button">Voir le projet</a>
-        </div>
+    
     </div>
 </div>
 <?php get_footer(); // Charge le footer du thème ?>

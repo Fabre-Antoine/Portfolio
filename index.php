@@ -46,7 +46,7 @@ get_header();
     <div class="project-content">
         <h4 class="project-title">Usebike</h4>
         <p class="project-description">Usebike est un site réalisé dans le but de promouvoir le vélotaf pour la région Nord Franche Comté, il a été réalisé en groupe dans le cadre d’une mis en situation professionnelle, il nous a été demandé de créer toute l’identité visuelle du site (logo, charte graphique, site) et pour cela nous avons utiliser Illustrator, Figma et Wordpress.</p>
-        <a href="https://example.com" class="project-button">En savoir plus</a>
+        <a class="project-button" href="<?php echo home_url('/projet-1'); ?>">Voir le projet</a>
     </div>
     </div>
 
@@ -78,8 +78,7 @@ get_header();
     <div class="card-contact-content">
         <h5 class="card-contact-title">Une idée de Projet ?</h5>
         <p class="card-contact-text">Contacter moi pour me parler de votre projet, et peux être travailler ensemble !</p>
-        <a href="https://example.com" class="contact-button">Me contacter</a>
-    </div>
+        <a class="contact-button" href="<?php echo home_url('/contact'); ?>">Me contacter</a>
 </div>
 </div>
 
